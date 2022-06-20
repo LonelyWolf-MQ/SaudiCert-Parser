@@ -28,7 +28,6 @@ def description(parsed_html):
 
 def threats(parsed_html):
     threats = re.findall(r"(?:Threats:|Threats:</strong>:|An attacker|Attacker|Remote).*?(?=(?:<strong>Best|<p><b>Best))", str(parsed_html),re.DOTALL)
-    print(threats)
     thr = re.sub("Threats:</b></p>|Threats:</strong>", "", threats[0])
     return html2text.html2text(thr)
 
