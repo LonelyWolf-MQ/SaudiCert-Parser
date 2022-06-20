@@ -1,5 +1,5 @@
 # Saudi CERT Parser
-A tool that parse security alerts notified by ![Saudi CERT](https://cert.gov.sa/en) and converts them into multi formats (JSON, CSV, TXT).
+A tool that parse security alerts notified by ![SaudiCERT](https://cert.gov.sa/) and converts them into multi formats (JSON, CSV, TXT).
 
 ## To run the project what you need is:
 - Having python3.
