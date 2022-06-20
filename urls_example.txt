@@ -1,0 +1,10 @@
+https://cert.gov.sa/en/security-warnings/drupal-alert-2022-09/
+https://cert.gov.sa/en/security-warnings/ibm-alert09843/
+https://cert.gov.sa/en/security-warnings/red-hat-alert-098762/
+https://cert.gov.sa/en/security-warnings/dell-alert-2876211/
+https://cert.gov.sa/en/security-warnings/ibm-alert-2022-96/
+https://cert.gov.sa/en/security-warnings/ubuntu-alert-2022-76/
+https://cert.gov.sa/en/security-warnings/red-hat-alert-2022-909/
+https://cert.gov.sa/en/security-warnings/hpe-alert-2022-98/
+https://cert.gov.sa/en/security-warnings/suse-alert-2022-65/
+https://cert.gov.sa/en/security-warnings/npm-alert-2022-22/
