@@ -9,17 +9,17 @@ def warningDate(ParTagResp):
     warn_date = re.findall(r"\d{1,2}\s.*?,\s+\d{4}", str(ParTagResp))
     return warn_date[0]
 
-def level(SpanTagResp):
-    lvl = re.findall(r"●\s(High|Low|Medium|Critical)", str(SpanTagResp))
+def level(ParTagResp):
+    lvl = re.findall(r"●\s(High|Low|Medium|Critical)", str(ParTagResp))
     return lvl[0]
 
 def warningNumber(ParTagResp):
     warn_num = re.findall(r"20[0-9]{2}-[0-9]{3,4}", str(ParTagResp))
     return warn_num[0]
 
-def targetSector(ParTagResp):
-    target = re.findall(r"(?<=Target\sSector:).*?(?=</p>)", str(ParTagResp),re.DOTALL)
-    return target[0].strip()
+def targetSector(parsed_html):
+    target = re.findall(r"(?<=[0-9]<\/p>\n<p>).*?(?=<\/p>)", str(parsed_html),re.DOTALL)
+    return html2text.html2text(target[0])
 
 def description(parsed_html):
     Description = re.findall(r"(?:Description:|Description</b>:|Description</strong>:).*?(?=(?:<b>Threats:|<strong>Threats:))", str(parsed_html),re.DOTALL)
@@ -27,7 +27,7 @@ def description(parsed_html):
     return html2text.html2text(Descriptions1)
 
 def threats(parsed_html):
-    threats = re.findall(r"(?:Threats:|Threats:</strong>:|An attacker|Attacker|Remote).*?(?=(?:<strong>Best|<p><b>Best))", str(parsed_html),re.DOTALL)
+    threats = re.findall(r"(?:Threats:|Threats:</strong>:|</p>An attacker|</p>Attacker|</p>Remote).*?(?=(?:<strong>Best|<p><b>Best))", str(parsed_html),re.DOTALL)
     thr = re.sub("Threats:</b></p>|Threats:</strong>", "", threats[0])
     return html2text.html2text(thr)
 
