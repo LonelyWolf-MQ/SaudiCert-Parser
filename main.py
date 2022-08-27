@@ -55,7 +55,6 @@ def parseUrl(url,fileformat):
     session = requests.Session()
     response = session.get(url)
     parsed_html = BeautifulSoup(response.content, "html.parser")
-    print(parsed_html)
     for tag in parsed_html.find_all("script"):
         tag.decompose()
     for tag in parsed_html.find_all("style"):
